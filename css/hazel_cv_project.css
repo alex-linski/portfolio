@@ -1,0 +1,209 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Forum", serif;
+}
+/* Good practice to set margin and padding of the body to 0 to remove white space on the edges.*/
+
+.hero {
+    background-color: #f08e80;
+    min-height: 90vh;
+    color: white;
+    display: inline-block;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 32px;
+}
+
+.nav_bar .links a {
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 1.2rem;
+    color: white;
+}
+/* Must usually specifically mention links they don't usually inherit properties.*/
+
+.nav_bar p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 120px 0 0;
+
+}
+
+.nav_bar .contact {
+    font-size: 1rem;
+    background-color: white;
+    color: #f08e80;
+    text-decoration: none;
+    padding: 16px 24px;   
+}
+
+.nav_bar .contact:hover {
+    opacity: 0.9;
+}
+
+.hero_content {
+    padding: 0 15%;
+}
+
+.tagline {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 20px 0;
+}
+
+.two-column-section {
+    font-size: 1.5rem;
+}
+
+.two-column-section p {
+    width: 50%;
+    float: left;
+}
+
+.two-column-section ul {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.two-column-section li {
+    margin: 10px 0;
+}
+
+.blog_section {
+    background-color: white;
+    padding: 64px 0;
+    height: 60vh;
+}
+
+.blog_content {
+    padding: 0 15%;
+}
+
+.new-two-column-section {
+    width: 50%;
+    float: left;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+.cards {
+    margin-bottom: 32px;
+}
+
+.cards p {
+    margin: 8px 0;
+}
+
+.blog-heading {
+    font-size: 1.5rem;
+}
+
+.blog-text {
+    font-size: 1rem;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.events_section {
+    background-color: #fdf0e6;
+    padding: 64px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.events_content {
+    padding: 0 15%;
+}
+
+.event-heading {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.event-location {
+    font-size: 1rem;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.events-title {
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer-content {
+    text-align: center;
+}
+/* Text-align only works on inline elements.*/
+
+footer {
+    padding: 60px;
+}
+
+footer img {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 8px;
+}
+
+.footer-content p {
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero_content, .events_content, .blog_content {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .tagline {
+        margin: 0;
+    }
+
+    .two-column-section > p {
+        width: 100%;
+    }
+
+    .two-column-section > ul {
+        width: 100%;
+    }
+
+    .new-two-column-section {
+        width: 100%;
+    }
+
+    .section-heading, .blog-title, .events-title {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .links {
+        display: none;
+        /* Makes the chosen element dissapear from the screen basically -> other elements forget they exist as well.*/
+    }
+}

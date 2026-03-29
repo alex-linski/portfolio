@@ -1,0 +1,326 @@
+
+body {
+    background-color: rgb(233,223,255);
+    font-family: "open sans", sans-serif;
+    padding: 32px;
+    /* Add padding to the body so that when screen size shrinks the content doesn't go the full width of the screen.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(44,44,44);
+}
+
+h1 {
+    color: rgb(83,49,156);
+    margin: 32px 0 64px 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 64px 64px 64px;
+    box-sizing: border-box;
+    position: relative;
+    /* Set this position to relative to attract the element you want to position.*/
+}
+
+.tabs {
+    display: flex;
+    width: 100%; 
+    height: 98px;
+    /* width: 100%; makes it 100% of the width of the parent element. IMPORTANT.*/
+    justify-content: space-around;
+    font-weight: bold;
+    color: rgb(200,175,255);
+    padding: 16px;
+    position: relative;
+}
+
+.tabs div {
+    margin-top: 15px;
+    padding: 8px;
+}
+
+.tabs div:hover {
+    color: rgb(83,49,156);
+    cursor: pointer;
+}
+
+.tabs div.active {
+    color: rgb(83,49,156);
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(231,231,231);
+    position: absolute;
+    top: 98px;
+}
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    height: 3px;
+    width: 200%;
+    background-color: rgb(83,49,156);
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    bottom: 13px;
+    left: -50%; 
+}
+
+.toggle_stuff {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle_stuff img {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toggle {
+    width: 140px;
+    height: 32px;
+    background-color: rgb(83,49,156);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 0 16px;
+    font-weight: bold;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.toggle .mobile {
+    color: white;
+}
+
+.toggle .web {
+    background-color: white;
+    color: rgb(83,49,156);
+    border-radius: 20px;
+    padding: 4px 16px;
+}
+
+.sessions_card {
+    background-color: rgb(250,247,255);
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    width: 50%;
+    margin: 16px 0;
+    box-sizing: border-box;
+}
+
+.sessions_card p {
+    color: rgb(44,44,44);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+
+.sessions_card .number {
+    color: rgb(83,49,156);
+    font-size: 54px;
+    margin: 0;
+}
+
+.description {
+    line-height: 32px;
+    margin: 16px 0 32px 0;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.slider .bar {
+    width: 100%;
+    height: 16px;
+    border: solid rgb(210,210,210) 1px;
+    border-radius: 20px;
+    background-color: rgb(250,250,250);
+}
+
+.slider .bar .progress {
+    width: 30%;
+    height: 18px;
+    background: linear-gradient(
+        90deg,
+        rgba(2,0,36,1) 0%,
+        rgba(53,10,74,1) 36%,
+        rgba(83,49,156,1) 100%
+    );
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.point {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: rgb(83,49,156);
+    border: solid white 2px;
+    position: absolute;
+    left: 29%;
+    top: -5px;
+    transition: transform 0.15s;
+}
+
+.slider .point:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.scale {
+    width: 100%;
+}
+
+.slider .scale ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    font-weight: bold;
+    color: rgb(166,166,166);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card {
+    background-color: rgb(250,247,255);
+    border-radius: 10px;
+    padding: 16px 32px;
+    margin: 16px;
+    box-shadow: 0px 3px 11px 1px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: bold;
+    color: rgb(83,49,156);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.card .top-section {
+    font-size: 20px;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.card .top-section p {
+    margin: 4px 0;
+}
+
+.top-section .price {
+    color: rgb(44,44,44);
+    font-size: 42px;
+}
+
+.card hr {
+    width: 30%;
+    border: 1px solid rgb(210,210,210);
+    border-radius: 2px;
+}
+
+.card button {
+    background-color: rgb(83,49,156);
+    color: white;
+    font-weight: bold;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.15 ease;
+    margin: 8px 0;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card .save-header {
+    position: absolute;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(2,0,36,1) 0%,
+        rgba(53,10,74,1) 36%,
+        rgba(83,49,156,1) 100%
+    );
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    top: -24px;
+    left: 0;
+}
+
+@media only screen and (max-width: 750px) {
+    .cards-container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    body {
+        padding: 8px 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .sessions_card {
+        width: 100%;
+    }
+
+    h1 {
+        margin: 0 0 16px 0
+    }
+
+    .toggle_stuff {
+        width: 90%;
+        justify-content: space-around;
+    }
+}
+
+
+
+

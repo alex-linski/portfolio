@@ -1,0 +1,154 @@
+
+body {
+    font-family: mukta, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Bitter, serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 80px;
+    letter-spacing: -1.5px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px; 
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 38px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: 30px;
+    letter-spacing: 0.25px;
+}
+
+h5 {
+    font-size: 24px;
+    letter-spacing: 0.25px;
+}
+
+h6 {
+    font-size: 20px;
+    letter-spacing: 0.25px;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.info {
+    text-align: center;
+    font-family: Bitter, serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.info span {
+    color: #e95400;
+}
+
+.quote {
+    border-left: #e95400 solid 2px;
+    padding-left: 16px;
+    font-style: italic;
+    font-size: 14px;
+    margin: 32px 0 32px 32px;
+}
+
+.quote cite {
+    font-weight: bold;
+    display: block;
+    margin-left: 20px;
+}
+
+.headline {
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: 18px;
+}
+
+.headline span {
+    color: #e95400;
+}
+
+code {
+    color: #e95400;
+}
+
+.hero {
+    background-color: #863ae8;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1, .hero p {
+    width: 75%;
+    max-width: 900px;
+    margin: 16px 0;
+}
+
+.hero hr {
+    width: 75%;
+    max-width: 900px;
+    margin: 32px 0;
+}
+
+footer {
+    background-color: #863ae8;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 28px 0;
+}
+
+footer li {
+    display: inline;
+    padding: 0 16px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer li:hover {
+    text-decoration: underline white 2px;
+}
+
+
+/* Serif fonts are considered to be a poor choice for body text and better for headings.*/
+
+/* Sans-serif fonts are considered to be a better choice for body text.*/
+
+/* Set margin and padding in the body to initially be 0 to wipe possible default margin/padding.*/
+
+/* height: 100vh; sets the height to be 100% of the viewers screen height.*/
+

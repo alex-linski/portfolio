@@ -1,0 +1,314 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile_nav {
+    background-color: white;
+    height: 100vh;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    right: -160px;
+    padding: 16px;
+    transition: 0.3s transform;
+}
+
+.mobile_nav img {
+    width: 24px;
+    height: 24px;
+    margin: 16px 0;
+}
+
+.mobile_nav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobile_nav a:hover {
+    text-decoration: underline;
+}
+
+.mobile_nav img:hover {
+    cursor: pointer;
+}
+
+.open_drawer {
+    transform: translateX(-160px);
+}
+
+.project {
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.project .overlay {
+    opacity: 0;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 2px;
+    background-color: rgba(255,255,255,0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+
+.overlay.white {
+    color: white;
+}
+
+.overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-areas: 
+    "eth eth alphabet"
+    "eth eth traveler"
+    "cube astro traveler"
+    "cup insta insta"
+    "cup insta insta"
+    "foam foam dimensional"
+    "foam foam dimensional";
+    column-gap: 16px;
+    row-gap: 16px;
+    width: 100%;
+}
+
+#eth {
+    grid-area: eth;
+}
+
+#alphabet {
+    grid-area: alphabet;
+}
+
+#traveler {
+    grid-area: traveler;
+}
+
+#cube {
+    grid-area: cube;
+}
+
+#astro {
+    grid-area: astro;
+}
+
+#cup {
+    grid-area: cup;
+}
+
+#insta {
+    grid-area: insta;
+}
+
+#foam {
+    grid-area: foam;
+}
+
+#dimensional {
+    grid-area: dimensional;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    position: relative;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+footer {
+    padding: 64px;
+    text-align: center;
+}
+
+.hamburger {
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 3;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 36px;
+    height: 4px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+    .open_drawer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .project_grid {
+        grid-template-areas: 
+        "eth eth"
+        "alphabet traveler"
+        "cube astro"
+        "insta insta"
+        "cup foam"
+        "dimensional dimensional";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project_grid {
+        grid-template-areas: 
+        "eth eth"
+        "alphabet alphabet"
+        "traveler traveler"
+        "cube astro"
+        "insta insta"
+        "cup cup"
+        "foam foam"
+        "dimensional dimensional";
+        margin-top: 100px;
+    }
+
+    .project .overlay {
+        font-size: 24px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar {
+        padding: 16px 24px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+
+@keyframes flipBar1 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+    }
+}
+
+@keyframes fadeBar2 {
+    from {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes flipBar3 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+    }
+}
+
+.animatebar1 {
+    animation: 0.5s flipBar1 forwards;
+    /* Nothing is connected to this class but you can give something this class with javascript. */
+}
+
+.animatebar2 {
+    animation: 0.5s fadeBar2 forwards;
+}
+
+.animatebar3 {
+    animation: 0.5s flipBar3 forwards;
+}
+
+
+/* <p>'s have margin by default.*/
+
+/* <opacity> is a good property to animate. -> use for disappearences.*/

@@ -1,0 +1,122 @@
+body {
+    font-family: Cormorant, serif;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 300;
+    margin: 0 32px 0 0;
+}
+
+.links {
+    display: inline-block;
+}
+
+.links li {
+    display: inline-block;
+}
+
+.links a {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.navbar {
+    margin: 32px;
+}
+
+.links ul {
+    padding: 0;
+}
+
+.active a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+}
+
+.gallery {
+    width: 49.75%;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    object-fit: cover;
+    /* Object-fit sets how a image/video reacts to screen size change.*/
+}
+
+.gallery:hover {
+    opacity: 0.9;
+}
+
+.descriptions {
+    display: inline-block;
+    width: 49.75%;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: 8px 0 50px 0;
+    /* Use divs to group the h2's with the images :)*/
+    /* Can use width: 100% to make something fit fully in its parent element.*/
+}
+
+.display {
+    margin: 16px;
+}
+
+.about {
+    width: 40%;
+    min-width: 600px;
+    margin: 50px 0 50px 100px;
+}
+
+.about h3 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.contact {
+    margin-top: 100px;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.cta {
+    padding-bottom: 8px;
+    border-bottom: solid black 1px;
+    display: inline-block;
+    margin-top: 0;
+}
+
+
+/* The way I wrote this doesn't match making it hard to change it.*/
+
+@media only screen and (max-width: 1000px) {
+    .gallery {
+        width: 100%;
+    }
+
+    .about {
+        margin: 100px 0 100px 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery {
+        padding: 0;
+    }
+
+    .display {
+        margin: 0;
+    }
+
+    .about {
+        margin: 100px auto;
+        min-width: 450px;
+    }
+
+}
+
+
