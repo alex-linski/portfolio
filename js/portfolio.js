@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Get all img IDs inside divs with class "xxx"
     const imgIds = [];
-    const images = document.querySelectorAll('div.project img[id]');
+    const images = document.querySelectorAll('div.project img[id^="project"]');
     console.log(images);
     
     let cnt = 1;
