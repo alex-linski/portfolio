@@ -111,7 +111,6 @@ function playerClass() {
     this.playerJumpSpeed = 8;
     this.playerMaxSpeed = 5;
 
-    this.playerJumping = false;
     this.playerFalling = true;
     // NEW: Velocity properties for bounce
     this.playerVelocityX = 0;
@@ -181,7 +180,6 @@ function playerClass() {
         
         if(this.playerJumped) 
         {
-            this.playerJumping = true;
             this.playerJump();
             this.playerFalling = true;
         }
@@ -318,7 +316,7 @@ var levelActive = 0;
 var playerSpawnPosX;
 var playerSpawnPosY;
 
-var levelOne = [0,0,2,1,0,0,0,0,
+var levelOne = [0,0,2,0,0,0,0,0,
                 0,0,4,1,0,5,0,0,
                 0,0,1,0,0,1,0,0,
                 0,0,1,0,0,1,0,0,
@@ -381,7 +379,6 @@ function setPlayerStatsToDefault(whichPlayer) {
     whichPlayer.playerMovingLeft = false;
     whichPlayer.playerMovingRight = false;
     whichPlayer.playerJumped = false;
-    whichPlayer.playerJumping = false;
     whichPlayer.playerFalling = true;
     whichPlayer.playerVelocityX = 0;
     whichPlayer.playerVelocityY = 0;
@@ -668,7 +665,6 @@ function playerCollisionHandling(whichPlayer)
             else if(playerDirection == "down") 
             {
                 whichPlayer.playerY = whichPlayer.playerPrevY;
-                whichPlayer.playerJumping = false;
 
                 if(whichPlayer.playerVelocityY < -1) { 
                     whichPlayer.playerVelocityY = -whichPlayer.playerVelocityY * whichPlayer.coefficientOfRestitution;
@@ -684,13 +680,11 @@ function playerCollisionHandling(whichPlayer)
                 {
                     whichPlayer.playerY = whichPlayer.playerPrevY;
                     whichPlayer.playerVelocityY = 0;
-                    whichPlayer.playerJumping = false;
                 }
                 else if(playerDirection == "downDiagLeft" && isSolidBlock(currentLevel[edgeInfo.index - 1])) 
                 {
                     whichPlayer.playerY = whichPlayer.playerPrevY;
                     whichPlayer.playerVelocityY = 0;
-                    whichPlayer.playerJumping = false;
                 }
                 else if(isSolidBlock(currentLevel[edgeInfo.index + levelColumns])) 
                 {
@@ -744,7 +738,7 @@ function checkIfPlayerFalling(whichPlayer) {
     var belowBallCol = Math.floor(whichPlayer.playerX / blockWidth);
     var blockBelow = getBlockTypeAtArrayIndex(belowBallRow, belowBallCol);
     
-    if(!isSolidBlock(blockBelow) && blockBelow != playerWon && !whichPlayer.playerJumping) 
+    if(!isSolidBlock(blockBelow) && blockBelow != playerWon) 
     {
         // Nothing below player anymore - start falling
         whichPlayer.playerFalling = true;
