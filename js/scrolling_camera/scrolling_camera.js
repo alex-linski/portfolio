@@ -502,9 +502,11 @@ function playerCollisionHandling(whichPlayer)
             else 
             {
                 player1.playerAcceleration = 0;
-                player1.playerUnderGravitySpeed = 0;
                 player2.playerAcceleration = 0;
+                player1.playerUnderGravitySpeed = 0;
                 player2.playerUnderGravitySpeed = 0;
+                player1.playerJumpSpeed = 0;
+                player2.playerJumpSpeed = 0;
 
                 if(player1.playerWins > player2.playerWins) 
                 {
