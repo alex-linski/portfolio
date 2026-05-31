@@ -299,7 +299,7 @@ function drawAll() {
 
     var brickIndexUnderMouse = rowColToArrayIndex(mouseBrickCol,mouseBrickRow);
 
-    colorText(mouseBrickCol+','+mouseBrickRow+':'+brickIndexUnderMouse, mouseX,mouseY, 'red', '10px Arial')
+    // colorText(mouseBrickCol+','+mouseBrickRow+':'+brickIndexUnderMouse, mouseX,mouseY, 'red', '10px Arial')
     // shows mouse coordinattes; good for debugging
     // Whichever draw function is put after the other ones will have a higher "z-index" you could say then the other ones
 }

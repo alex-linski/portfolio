@@ -3,15 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Racing Game</title>
+    <title>RACING GAME</title>
     <script src="js/racing_game_js/graphics_common.js"></script>
     <script src="js/racing_game_js/car.js"></script>
     <script src="js/racing_game_js/track.js"></script>
     <script src="js/racing_game_js/input.js"></script>
     <script src="js/racing_game_js/racing_game_main.js"></script>
     <script src="js/racing_game_js/image_loading.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0d0d0d ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+        }
+
+        .layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        #game-canvas {
+            display: block;
+            border: 2px solid #00ff41;
+        }
+
+        .project-info {
+            width: 240px;
+            padding-top: 8px;
+        }
+
+        .project-header {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff41;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .project-description {
+            width: 100%;
+            min-height: 190px;
+            background: transparent;
+            border: 1px solid #00ff41;
+            border-radius: 4px;
+            color: #ccc;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            padding: 10px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .project-description::placeholder {
+            color: #555;
+        }
+
+        .project-description:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="game-canvas" width="800px" height="600px"></canvas>
+    <div class="layout">
+        <canvas id="game-canvas" width="800" height="600"></canvas>
+
+        <div class="project-info">
+            <div class="project-header">Racing Game</div>
+            <textarea
+                class="project-description"
+                placeholder="Description:"
+            >A project based around trying to make a 2 player racing car game to learn how to program more complex movement and physics. Practice for making basic game art as well. Use arrow keys to move player 1 and WASD to move player 2.</textarea>
+        </div>
+    </div>
 </body>
 </html>
